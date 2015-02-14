@@ -1,8 +1,8 @@
 Feature:
-  Como jugador
-  quiero que el juego me de la bienvenidad
-  para engancharme al juego
+  Como feligres
+  quiero ingresar a una página web 
+  para encontrar información de la iglesia
 
-  Scenario: veo la pantalla de bienvenida
-    Given ingreso al juego
-    Then veo el mensaje "Hola Mundo"
+  Scenario: ingresar al portal de iglesias
+    Given que ingreso a la pagina web de las iglesias 
+    Then veo el mensaje "Bienvendio al Portal"

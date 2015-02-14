@@ -12,13 +12,14 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class SmokeSteps {
 
-    @Given("^ingreso al juego$")
-    public void ingreso_al_juego() throws Throwable {
-        Selenide.open("http://localhost:4567/");
-    }
+	@Given("^que ingreso a la pagina web de las iglesias$")
+	public void que_ingreso_a_la_pagina_web_de_las_iglesias() throws Throwable {
+		Selenide.open("http://localhost:4567/");
+	}
 
-    @Then("^veo el mensaje \"([^\"]*)\"$")
-    public void veo_el_mensaje(String message) throws Throwable {
-        $(By.id("welcome")).shouldHave(text(message));
-    }
+	@Then("^veo el mensaje \"([^\"]*)\"$")
+	public void veo_el_mensaje(String message) throws Throwable {
+		$(By.id("welcome")).shouldHave(text(message));
+	}
+
 }
