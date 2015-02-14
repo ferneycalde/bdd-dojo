@@ -20,20 +20,19 @@ public class Spark {
             return new ModelAndView(model, "index.wm");
         }, new VelocityTemplateEngine());
 
-       /* post("/login", (request, response) -> {
+      post("/buscar", (request, response) -> {
         	
-        	String usuario = request.queryParams("usuario");
-        	String password = request.queryParams("password");
+        	String Iglesia = request.queryParams("iglesia");
         	
-        	loginValidator loginValidator = new loginValidator();  	
+ //       	buscarValidator buscarValidator = new buscarValidator();  	
         	
             Map<String, Object> model = new HashMap<>();
-            if(loginValidator.valide(usuario, password)){
-            model.put("saludo", "Bienvenido a Ananzon, " + usuario);
-            }
-            return new ModelAndView(model, "login.wm");
+
+            model.put("buscador", "BUSCAR IGLESIA POR BARRIO");
+
+            return new ModelAndView(model, "buscar.wm");
         }, new VelocityTemplateEngine());
-        */
+        
     }
 
 
