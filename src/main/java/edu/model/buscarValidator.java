@@ -10,6 +10,7 @@ public class buscarValidator {
 		userData.put("Divino Niño", "Diamante");
 		userData.put("Santa Maria", "Cañaveral");
 	}
+
 	
 	public boolean valide(String iglesia, String barrio){
 		String passwordInDataBase = userData.get(iglesia);

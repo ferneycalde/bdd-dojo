@@ -1,7 +1,7 @@
 <html>
 	<head></head>
 	<body>
-		<form action="/login" method="POST">			
+		<form action="/buscar" method="GET">			
 			</br>
 			<h1 style="text-align: center;" id="portal">${portal}</h1>
 			<p> </p>
