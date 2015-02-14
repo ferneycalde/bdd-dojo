@@ -2,7 +2,7 @@
 	<head></head>
 	<body>
 		<form action="/login" method="POST">
-			<h1 id="iglesia">${iglesia}</h1>
+			<h1 id="portal">${portal}</h1>
 			<h1 id="welcome">${welcome}</h1>
 			
 			<input type="submit" id="login" value="login"/>
