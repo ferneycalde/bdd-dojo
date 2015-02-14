@@ -1,8 +1,10 @@
 Feature:
   Como feligres
-  quiero ingresar a una página web 
+  quiero buscar el listado de iglesias 
   para encontrar información de la iglesia
 
   Scenario: ingresar al portal de iglesias
     Given que ingreso a la pagina web de las iglesias 
-    Then veo el mensaje "Bienvendio al Portal"
+    When doy clic en el boton de "Ingresar al Portal"
+    Then ingresa al portal
+    And  se lista la información de la iglesia
