@@ -24,8 +24,10 @@ public class buscarValidator {
 		return nombresIglesias = userData.get(barrio);
 		
 	}
-	public boolean valide(String barrio){		
-		if(userData.equals(barrio)){
+	
+	public boolean valide(String barrio, ArrayList<String> nombreIglesias){		
+		ArrayList<String> iglesiasInDataBase = userData.get(barrio);
+		if(nombreIglesias.equals(iglesiasInDataBase)){
 			return true;	
 		}
 		return false;
