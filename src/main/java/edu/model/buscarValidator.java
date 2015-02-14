@@ -9,6 +9,8 @@ public class buscarValidator {
 	{
 		userData.put("Centro", new ArrayList());
 		userData.get("Centro").add("Sagrado Corazon");
+		userData.get("Centro").add("Sagrada Familia");
+		userData.get("Centro").add("Dolores");
 		userData.put("Diamante", new ArrayList());
 		userData.get("Diamante").add("Divino Niño");
 		userData.put("Cañaveral", new ArrayList());
@@ -20,8 +22,10 @@ public class buscarValidator {
 		return nombresIglesias = userData.get(barrio);
 		
 	}
-	public boolean valide(String barrio){		
-		if(userData.equals(barrio)){
+	
+	public boolean valide(String barrio, ArrayList<String> nombreIglesias){		
+		ArrayList<String> iglesiasInDataBase = userData.get(barrio);
+		if(nombreIglesias.equals(iglesiasInDataBase)){
 			return true;	
 		}
 		return false;
