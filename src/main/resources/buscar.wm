@@ -4,7 +4,11 @@
 			
 					<form action="/listar" method="GET">	
 					<h1 id="buscador">${buscador}</h1>
+<<<<<<< HEAD
+					<input type="text" id="barrio" name="barrio"/>  INGRESE EL BARRIO  </br> 
+=======
 					<input type="text" id="barrio" name="barrio"/>  INGRESE EL BARRIO  </br> 					
+>>>>>>> cb5204c27c618b89605c1ea42f5a03816054b812
 					<input type="submit" id="buscar" value="BUSCAR"/>
 					</form>
 			
