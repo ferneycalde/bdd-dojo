@@ -19,20 +19,15 @@ public class SmokeSteps {
 	public void que_ingreso_a_la_pagina_web_de_las_iglesias() throws Throwable {
 		Selenide.open("http://localhost:4567/");
 	}
-	
-	/*@Then("^veo el mensaje \"([^\"]*)\"$")
-	public void veo_el_mensaje(String mensaje) throws Throwable {
-		$(By.id("welcome")).shouldHave(text(mensaje));
-	}*/
 
 	@When("^doy clic en el boton ingresar al portal$")
 	public void doy_clic_en_el_boton_de() throws Throwable {
 		$(By.id("ingresar")).click();
 	}
-
-	@Then("^ingresa al portal$")
-	public void ingresa_al_portal(String buscarPorBarrio) throws Throwable {
-		$(By.id("buscador")).shouldHave(text(buscarPorBarrio));
+	
+	@Then("^ingresa al portal \"([^\"]*)\"$")
+	public void veo_el_mensaje(String mensaje) throws Throwable {
+		$(By.id("buscador")).shouldHave(text(mensaje));
 	}
 
 	@When("^ingrese el barrio \"([^\"]*)\"$")
