@@ -5,6 +5,5 @@ Feature:
 
   Scenario: ingresar al portal de iglesias
     Given que ingreso a la pagina web de las iglesias 
-    When doy clic en el boton de "Ingresar al Portal"
+    When doy clic en el boton ingresar al portal
     Then ingresa al portal
-    And  se lista la información de la iglesia

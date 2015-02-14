@@ -20,28 +20,34 @@ public class SmokeSteps {
 		Selenide.open("http://localhost:4567/");
 	}
 	
-	@Then("^veo el mensaje \"([^\"]*)\"$")
-	public void veo_el_mensaje(String arg1) throws Throwable {
-	    // Express the Regexp above with the code you wish you had
-	    throw new PendingException();
-	}
+	/*@Then("^veo el mensaje \"([^\"]*)\"$")
+	public void veo_el_mensaje(String mensaje) throws Throwable {
+		$(By.id("welcome")).shouldHave(text(mensaje));
+	}*/
 
-	@When("^doy clic en el boton de \"([^\"]*)\"$")
-	public void doy_clic_en_el_boton_de(String clicIngresar) throws Throwable {
-		$(By.id(clicIngresar)).click();
+	@When("^doy clic en el boton ingresar al portal$")
+	public void doy_clic_en_el_boton_de() throws Throwable {
+		$(By.id("ingresar")).click();
 	}
-
 
 	@Then("^ingresa al portal$")
-	public void ingresa_al_portal() throws Throwable {
-	    // Express the Regexp above with the code you wish you had
-	    throw new PendingException();
+	public void ingresa_al_portal(String buscarPorBarrio) throws Throwable {
+		$(By.id("buscador")).shouldHave(text(buscarPorBarrio));
 	}
 
-	@Then("^se lista la información de la iglesia$")
-	public void se_lista_la_información_de_la_iglesia() throws Throwable {
-	    // Express the Regexp above with the code you wish you had
-	    throw new PendingException();
+	@When("^ingrese el barrio \"([^\"]*)\"$")
+	public void ingrese_el_barrio(String barrio) throws Throwable {
+		$(By.id("barrio")).setValue(barrio);
+	}
+	
+	@When("^doy clic en el boton buscar$")
+	public void hago_clic_en() throws Throwable {
+		$(By.id("buscar")).click();
+	}
+
+	@Then("^debo ver la lista de iglesias de ese barrio$")
+	public void debo_ver_la_lista_de_iglesias_de_ese_barrio(String iglesia) throws Throwable {
+		$(By.id("iglesia")).shouldHave(text(iglesia));
 	}
 
 
