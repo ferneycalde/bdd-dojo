@@ -11,12 +11,12 @@ public class buscarValidator {
 		userData.put("Santa Maria", "Cañaveral");
 	}
 	
-	/*public boolean valide(String iglesia, String barrio){
-		String passwordInDataBase = userData.get(usuario);
-		if(password.equals(passwordInDataBase)){
+	public boolean valide(String iglesia, String barrio){
+		String passwordInDataBase = userData.get(iglesia);
+		if(barrio.equals(passwordInDataBase)){
 			return true;	
 		}
 		return false;
-	}*/
+	}
 
 }
