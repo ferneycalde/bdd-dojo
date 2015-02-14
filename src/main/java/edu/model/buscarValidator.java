@@ -1,20 +1,27 @@
 package edu.model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class buscarValidator {
 	
-	public static HashMap<String, String> userData = new HashMap<String, String>();
+	public static HashMap<String, ArrayList<String>> userData = new HashMap<String, ArrayList<String>>();
 	{
-		userData.put("Sagrado Corazon", "Centro");
-		userData.put("Divino Niño", "Diamante");
-		userData.put("Santa Maria", "Cañaveral");
+		userData.put("Centro", new ArrayList());
+		userData.get("Centro").add("Sagrado Corazon");
+		userData.put("Diamante", new ArrayList());
+		userData.get("Diamante").add("Divino Niño");
+		userData.put("Cañaveral", new ArrayList());
+		userData.get("Cañaveral").add("Santa Maria");
 	}
 
-	
-	public boolean valide(String iglesia, String barrio){
-		String passwordInDataBase = userData.get(iglesia);
-		if(barrio.equals(passwordInDataBase)){
+	public ArrayList<String> getNombreIglesias(String barrio){
+		ArrayList<String> nombresIglesias = new ArrayList<String>();		
+		return nombresIglesias = userData.get(barrio);
+		
+	}
+	public boolean valide(String barrio){		
+		if(userData.equals(barrio)){
 			return true;	
 		}
 		return false;

@@ -2,7 +2,7 @@
 	<head></head>
 	<body>
 			
-					<form action="/buscar" method="POST">	
+					<form action="/listar" method="GET">	
 					<h1 id="buscador">${buscador}</h1>
 					<input type="text" id="barrio" name="barrio"/>  INGRESE EL BARRIO  </br> 					
 					<input type="submit" id="buscar" value="BUSCAR"/>
