@@ -9,10 +9,14 @@ public class buscarValidator {
 	{
 		userData.put("Centro", new ArrayList());
 		userData.get("Centro").add("Sagrado Corazon");
+		userData.get("Centro").add("Sagrada Familia");
+		userData.get("Centro").add("Dolores");
 		userData.put("Diamante", new ArrayList());
 		userData.get("Diamante").add("Divino Niño");
+		userData.get("Diamante").add("Corazon de Jesus");
 		userData.put("Cañaveral", new ArrayList());
 		userData.get("Cañaveral").add("Santa Maria");
+		userData.get("Cañaveral").add("Nuestra Señora del Pilar");
 	}
 
 	public ArrayList<String> getNombreIglesias(String barrio){

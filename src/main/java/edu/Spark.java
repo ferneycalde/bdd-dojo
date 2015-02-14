@@ -5,7 +5,6 @@ import spark.template.velocity.VelocityTemplateEngine;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 import edu.model.buscarValidator;
@@ -18,17 +17,14 @@ public class Spark {
     	
     	get("/listar", (request, response) -> {
     		buscarValidator buscarValidator = new buscarValidator();  	
-        	//String barrio = request.queryParams("barrio");
-    		String barrio = "Centro";
+        	String barrio = request.queryParams("barrio");
+    		//String barrio = "Centro";
     		ArrayList<String> nombresIglesias = buscarValidator.getNombreIglesias(barrio);        	
         	
             Map<String, Object> model = new HashMap<>();
 
             model.put("buscador", "LISTADO DE IGLESIA POR BARRIO");
-            Iterator<String> nombreIterador = nombresIglesias.iterator();
-            while(nombreIterador.hasNext()){
-            	model.put("nombreIglesia",nombreIterador.next());
-            }
+            model.put("nombreIglesia", nombresIglesias);
             return new ModelAndView(model, "listar.wm");
             
         }, new VelocityTemplateEngine());

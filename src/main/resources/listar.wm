@@ -2,8 +2,11 @@
 	<head></head>
 	<body>			
 					<h1 id="buscador">${buscador}</h1>
-					<tr>		
 					<h1 id="nombreIglesia">${nombreIglesia}</h1>
-					</tr>					
+					<c:forTokens items=${nombreIglesia} delims = "," var = "nombre">
+					  <c:out value="${nombre}"/>			
+					</c:forTokens>	
+			
 	</body>
+	
 </html>
