@@ -1,7 +1,7 @@
 <html>
 	<head></head>
 	<body>
-		<form action="/buscar" method="GET">			
+		<form action="/buscar" method="POST">			
 			</br>
 			<h1 style="text-align: center;" id="portal">${portal}</h1>
 			<p> </p>
@@ -13,7 +13,7 @@
 			<p style="text-align: center;"> </p>
 			<p style="text-align: center;"> </p>
 
-			<center> <input  type="submit" id=ingresar value="INGRESAR AL PORTAL"/></center>
+			<center> <input  type="submit" id=ingresar value="INGRESAR AL PORTAL" /></center>
 		</form>
 	</body>	
 </html>
